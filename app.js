@@ -1,22 +1,51 @@
-const os=require('os');  //core module  ; var os will contain all contents of os module
-const calc=require('./calculator.js'); //user defined module
-const _=require('lodash'); //third party module
-console.log(os.userInfo()); //callig userInfo method with os variable.
-console.log(`sum of values are ${calc.add(1,2)}`);
-console.log(calc.constant);
-console.log(_.isString('as'));
-console.log(_.isString(true));
+const fs=require('fs');
 
-//process is inbuilt keyword
-var arg=process.argv[2]; //argv is used to get command line args
-var val1=process.argv[3];
-var val2=process.argv[4];
-if(arg==='add'){
-  console.log(calc.add(val1,val2)); //treated as string, need to convert to int
-}else if(arg==='sub'){
-  console.log(calc.sub(val1,val2));
-}else if(arg==='mul'){
-  console.log(calc.mul(val1,val2));
-}else {
-  console.log('unknown command- try again');
-}
+//delete any old data if present in the file.
+fs.truncate('student.txt',0,function(){
+  console.log('deleted all content');
+});
+
+
+var student={    //json object
+  "name":"Muthu",
+  "course":"node",
+  "level":"basic"
+};
+
+console.log(student.level); //printing a property
+
+/*fs.appendFile('student.txt',student,function(err){
+  if(err){
+    console.log('error while storing data');
+    return;
+  }
+  console.log('stored data'); //data stored would be [object object];
+});*/
+//to store it as string, we need to convert the object to string, then store it
+
+var dataString=JSON.stringify(student); //converts json obj to string
+fs.appendFile('student.txt',dataString,function(err){
+  if(err){
+    console.log('error while storing data');
+    return;
+  }
+  console.log('stored data'); //data stored would be [object object];
+  });
+/*
+fs.readFile('student.txt',function(err,data){
+  if(err){
+    console.log('exception while reading data from file');
+  }else{
+    console.log( `read data is ${data}`); //prints data as string as stored
+    console.log(`name is ${data.name}`); //name is undefined, data is not object,
+  }
+});*/
+fs.readFile('student.txt',function(err,data){
+  if(err){
+    console.log('exception while reading data from file');
+  }else{
+    console.log( `read data is ${data}`); //prints data as string as stored
+    var dataObj=JSON.parse(data); //converts string to json object
+    console.log(`name is ${dataObj.name}`); //name is undefined, data is not object,
+  }
+});

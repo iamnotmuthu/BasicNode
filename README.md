@@ -9,4 +9,6 @@ There are 3 types of Modules
   npm is a package manager, similar to maven. Used to package and import third party modules.</br>
   All info about modules will be present in node_modules folder.</br>
 process variable is available by default like modules</br>  
-triggering node app==>  node app add 1 2 (node =arg1, app=arg2 and so on..)
+triggering node app==>  node app add 1 2 (node =arg1, app=arg2 and so on..)</br>
+JSON.stringify()->converts json obj to stringif</br>
+JSON.parse()->coverts string to json object</br>
