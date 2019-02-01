@@ -12,3 +12,9 @@ process variable is available by default like modules</br>
 triggering node app==>  node app add 1 2 (node =arg1, app=arg2 and so on..)</br>
 JSON.stringify()->converts json obj to stringif</br>
 JSON.parse()->coverts string to json object</br>
+<h4>debug mode</h4><br>
+start in debug mode -->node inspect filename  (goes to content line by line)
+n -> next line; c-> continue till end;
+to go to specific place in code, add statement debugger in js file. on c, ctrl flows through and directly stops in  debugger line.
+repl-> gives current value of objects.(while in debug mode), can change value of method calls
+and verify if working fine.
