@@ -18,3 +18,8 @@ n -> next line; c-> continue till end;
 to go to specific place in code, add statement debugger in js file. on c, ctrl flows through and directly stops in  debugger line.
 repl-> gives current value of objects.(while in debug mode), can change value of method calls
 and verify if working fine.
+<h2>debug in browser</h2>
+node --inspect-brk --> will help to debug the app in chrome devtools.
+can create break points by click on license
+same debugger stmt also works</br>
+chrome://inspect is the url to connect to browser dev tool
