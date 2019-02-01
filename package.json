@@ -1,0 +1,22 @@
+{
+  "name": "basicnode",
+  "version": "1.0.0",
+  "description": "Modules are reusable components which are bundled together with a name - modulename.(Similar to library)\r There are 3 types of Modules\r   1) Modules which are created by us\r   2) Third party Modules\r   3) Core modules.\r   We shall reuse all above modules with help of require keyword\r   module is a keyword which is available by default.\r   npm is a package manager, similar to maven. Used to package and import third party modules.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iamnotmuthu/BasicNode.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iamnotmuthu/BasicNode/issues"
+  },
+  "homepage": "https://github.com/iamnotmuthu/BasicNode#readme",
+  "dependencies": {
+    "lodash": "^4.17.11"
+  }
+}
