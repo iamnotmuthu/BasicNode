@@ -1,2 +1,7 @@
-const calc=require('./calculator.js');
-console.log(calc.mul(20,30));
+const request = require('request');
+request({
+  url:'https://restcountries.eu/rest/v2/name/india',
+json:true}
+,(error,resp,body)=>{
+  console.log(body);
+});
