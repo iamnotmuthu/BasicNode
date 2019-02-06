@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/iamnotmuthu/BasicNode#readme",
   "dependencies": {
+    "express": "^4.16.4",
     "lodash": "^4.17.11",
     "request": "^2.88.0"
   }
